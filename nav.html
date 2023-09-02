@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAV</title>
+    <script src="https://kit.fontawesome.com/34aa9efc7a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <header style="border: 2px solid black;">
+        <div class="navbar">
+            <div class="logo"><a href="#">Ankit</a></div>     
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="#" class="action-btn">Get Started</a>
+            <div class="toggle-btn">
+                <i  class="fa-solid fa-bars"></i>
+                <i style="display: none;" class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <div class="drop-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" class="action-btn">Get Started</a></li>
+        </div>
+    </header>
+    <script>
+        const toggleBtn = document.querySelector(".toggle-btn");
+        const toggleBtnicon = document.querySelector(".toggle-btn i");
+        const dropmenu = document.querySelector(".drop-menu");
+        toggleBtn.onclick=function(){
+            dropmenu.classList.toggle('open');
+            const isopen=dropmenu.classList.contains('open');
+            toggleBtnicon.classList=isopen?'fa-solid fa-xmark':'fa-solid fa-bars';
+        }
+    </script>
+</body>
+</html>
